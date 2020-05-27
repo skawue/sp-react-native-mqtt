@@ -73,6 +73,8 @@ module.exports = {
       var protocol = matches[2];
       var host = matches[4];
       var port =  matches[5];
+      
+      console.log('[mqtt] url matches:', matches);
 
       options.port = parseInt(port);
       options.host = host;
