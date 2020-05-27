@@ -85,10 +85,16 @@
         
         self.manager = [[MQTTSessionManager alloc] initWithPersistence:NO maxWindowSize:MQTT_MAX_WINDOW_SIZE maxMessages:MQTT_MAX_MESSAGES maxSize:MQTT_MAX_SIZE maxConnectionRetryInterval:60.0 connectInForeground:NO streamSSLLevel:nil queue: queue];
         self.manager.delegate = self;
-        MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
-        transport.host = [self.options valueForKey:@"host"];
-        transport.port = [self.options[@"port"] intValue];
-        transport.voip = YES;
+        //MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
+        //transport.host = [self.options valueForKey:@"host"];
+        //transport.port = [self.options[@"port"] intValue];
+        //transport.voip = YES;
+        //
+        MQTTWebsocketTransport *transport = [[MQTTWebsocketTransport alloc] init];
+        transport.url = @"wss://push-mqtt-ws.system.trans.eu";
+        transport.path = @"/";
+        transport.allowUntrustedCertificates = true;
+        //
         self.manager.session.transport = transport;
         [self.manager connectTo:[self.options valueForKey:@"host"]
                            port:[self.options[@"port"] intValue]
