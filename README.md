@@ -8,7 +8,7 @@ A [react-native](https://github.com/facebook/react-native) mqtt client module th
 * Uses [MQTT Framework](https://github.com/ckrey/MQTT-Client-Framework) for IOS, [Paho MQTT Client](https://eclipse.org/paho/clients/android/) for Android
 * Supports both IOS and Android
 * SSL/TLS
-* Native library, support mqtt over tcp (forget websockets, we're on **mobile**)
+* Native library, support mqtt over tcp (works on websockets)
 
 
 ## Getting started
