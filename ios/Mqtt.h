@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTEventEmitter.h>
 
+#import <MQTTClient/MQTTWebsocketTransport.h>
 #import <MQTTClient/MQTTClient.h>
 #import <MQTTClient/MQTTSessionManager.h>
 #import <MQTTClient/MQTTSSLSecurityPolicy.h>
