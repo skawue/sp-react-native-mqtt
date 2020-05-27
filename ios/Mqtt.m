@@ -91,7 +91,7 @@
         //transport.voip = YES;
         //
         MQTTWebsocketTransport *transport = [[MQTTWebsocketTransport alloc] init];
-        transport.url = @"wss://push-mqtt-ws.system.trans.eu";
+        transport.url = [NSURL URLWithString:@"wss://push-mqtt-ws.system.trans.eu"];
         transport.path = @"/";
         transport.allowUntrustedCertificates = true;
         //
